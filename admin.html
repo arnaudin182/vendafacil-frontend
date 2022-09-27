@@ -84,9 +84,35 @@
 
             <div id="cadastrar_operador" class="modal">
                 <div class="modal_conteudo">
-                    <h1>CADASTRAR OPERADOR</h1>
-                    <p>Em construção</p>
-                    <a href="#"><div class="modal_fechar">Cancelar</div></a>
+
+                    <h1 class="modal_header" align="center">CADASTRAR OPERADOR</h1>
+                    
+                    <form>
+
+                        <p class="input_label">Nome:</p>
+                        <input type="text" id="name" class="name_input" required/>
+
+                        <p class="input_label">Data de Nascimento:</p>
+                        <input type="date" id="birth_date" class="birthdate_input" required/>
+
+                        <p class="input_label">Gênero:</p>
+                        <select id="gender" class="gender_input" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="masculino">Homem (Cis ou Trans)</option>
+                            <option value="feminino">Mulher (Cis ou Trans)</option>
+                            <option value="outros">Não-binário</option>
+                            <option value="outros">Gênero flúido</option>
+                        </select>
+
+                        <p class="input_label">CPF:</p>
+                        <input type="text" id="cpf" class="cpf_input" required/>
+
+                    </form>
+
+                    <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
+                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
+                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
+                    </span>
                 </div>
             </div>
 
@@ -94,7 +120,10 @@
                 <div class="modal_conteudo">
                     <h1>REMOVER OPERADOR</h1>
                     <p>Em construção</p>
-                    <a href="#"><div class="modal_fechar">Cancelar</div></a>
+                    <span class="modal_screen_options">
+                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
+                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
+                    </span>
                 </div>
             </div>
 
@@ -102,7 +131,10 @@
                 <div class="modal_conteudo">
                     <h1>ATUALIZAR ESTOQUE</h1>
                     <p>Em construção</p>
-                    <a href="#"><div class="modal_fechar">Cancelar</div></a>
+                    <span class="modal_screen_options">
+                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
+                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
+                    </span>
                 </div>
             </div>
 
@@ -110,7 +142,10 @@
                 <div class="modal_conteudo">
                     <h1>CADASTRAR CLIENTE</h1>
                     <p>Em construção</p>
-                    <a href="#"><div class="modal_fechar">Cancelar</div></a>
+                    <span class="modal_screen_options">
+                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
+                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
+                    </span>
                 </div>
             </div>
 
