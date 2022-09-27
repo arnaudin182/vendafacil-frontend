@@ -80,6 +80,7 @@ a:not(#disconnect){
     height: 70vh;
     background: #fff;
     padding: 1em 2em;
+    box-shadow: 2px 2px 20px #000000;
 }
 
 .modal:target{
@@ -87,17 +88,99 @@ a:not(#disconnect){
     opacity: 1;
 }
 
-.modal_fechar{
-    background-color: #3273ff;
+.bt_cancelar{
+    background-color: #a40c0c;
     width: 9vw;
     height: 6vh;
     border-radius: 5px;
-    border-color: rgb(44, 44, 255);
+    border-color: #810606;
     color: white;
     font-family: roboto;
     font-weight: 600;
-    font-size: 2.3vh;
+    font-size: 3vh;
     text-align: center;
     vertical-align: middle;
     margin-top: auto;
+    cursor: pointer;
+    onclick=""
+    
+}
+.bt_cancelar:hover{
+    -webkit-filter: brightness(70%);
+}
+
+.bt_concluir{
+    background-color: #059d3a;
+    width: 9vw;
+    height: 6vh;
+    border-radius: 5px;
+    border-color: #04732b;
+    color: white;
+    font-family: roboto;
+    font-weight: 600;
+    font-size: 3vh;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: auto;
+    cursor: pointer;
+    
+}
+.bt_concluir:hover{
+    -webkit-filter: brightness(70%);
+}
+
+.modal_screen_options{
+    position: absolute;
+    right: 4vh;
+    bottom:   3vh;
+}
+
+.modal_header{
+    font-family: Montserrat;
+    font-size: 4vh;
+    font-weight: bolder;
+    margin-top: -0.5vh;
+}
+#disconnect{
+    position: absolute;
+    right: 0vh;
+    top: 2vh;
+}
+.name_input{
+    width: 29vw;
+    height: 3vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+}
+.birthdate_input{
+    text-align: center;
+    width: 13vw;
+    height: 3vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+}
+.gender_input{
+    border-radius: 3px;
+    border-style: solid ;
+    border-color: #b7b7b7;
+    text-align: center;
+    width: 15vw;
+    height: 4vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+    background-color: #fff;
+}
+.cpf_input{
+    text-align: left;
+    width: 13vw;
+    height: 3vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+}
+.input_label{
+    font-size: 2.5vh;
+    font-weight: bolder;
+    font-family: Roboto;
+    margin-bottom: -0.05vh;
+    margin-left: 0.5vh;
 }
