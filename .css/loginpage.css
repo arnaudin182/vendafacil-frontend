@@ -1,0 +1,84 @@
+body{
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/.media/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+footer{
+    margin-top: auto;
+}
+#logo_img{
+    
+    width: 30vw;
+}
+#loginform{
+    padding-top: 6vh;
+    padding-bottom: 5vh;
+    margin-top: -1.3vh;
+    width:18vw;
+    max-height:45vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(180, 180, 180);
+    border-width: 1px;
+    box-shadow: 2px 2px 10px #000000;
+    align-self:inherit;
+}
+#login_fields{
+    padding-left: 1vw;
+}
+#user_login{
+    font-weight:100;
+    font-size: 3vh;
+    width: 17.3vw;
+    height: 5vh;
+    border-radius: 5px;
+
+}
+#user_pwd{
+    font-weight:100;
+    font-size: 3vh;
+    width: 17.3vw;
+    height: 5vh;
+    border-radius: 5px;
+
+}
+.field_label{
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+    margin-bottom: -0.01vh;
+    font-weight: bolder;
+    display: inline;
+    --balloon-font-size: 2vh;
+}
+.submit_bt{
+    display: inline;
+    background-color: #3273ff;
+    width: 9vw;
+    height: 6vh;
+    border-radius: 5px;
+    border-color: rgb(44, 44, 255);
+    color: white;
+    font-family: roboto;
+    font-weight: 600;
+    font-size: 2.3vh;
+}
+.submit_bt:active{
+    cursor:pointer;
+    position:relative;
+    top: 1vh;
+}
+.submit_bt:hover{
+    background-color: rgb(53, 53, 187);
+}
+a:visited{
+    color: #000000;
+}

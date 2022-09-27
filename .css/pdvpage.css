@@ -1,0 +1,10 @@
+body{
+   min-height: 100vh;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+}
+footer{
+   margin-top: auto;
+   align-self: center;
+}
