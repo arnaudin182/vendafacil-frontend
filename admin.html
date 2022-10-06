@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
         <title>Admin - PDV VendaFácil</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -40,7 +40,7 @@
                     </table>
                 </div></a>
 
-                <a href="#remover_cliente"><div class="modal_button" id="modal_remover_operador"> <!--MODAL REMOVER OPERADOR-->
+                <a href="#remover_operador"><div class="modal_button" id="modal_remover_operador"> <!--MODAL REMOVER OPERADOR-->
                     <table>
                         <tr>
                             <td>
@@ -90,40 +90,101 @@
                     <form>
 
                         <p class="input_label">Nome:</p>
-                        <input type="text" id="name" class="name_input" required/>
+                        <input type="text" id="nome" class="name_input" required/>
 
                         <p class="input_label">Data de Nascimento:</p>
-                        <input type="date" id="birth_date" class="birthdate_input" required/>
+                        <input type="date" id="data_nascimento" class="birthdate_input" required/>
 
                         <p class="input_label">Gênero:</p>
-                        <select id="gender" class="gender_input" required>
+                        <select id="genero" class="gender_input" required>
                             <option value="" disabled selected>Selecione</option>
-                            <option value="masculino">Homem (Cis ou Trans)</option>
-                            <option value="feminino">Mulher (Cis ou Trans)</option>
-                            <option value="outros">Não-binário</option>
-                            <option value="outros">Gênero flúido</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="I">Outros</option>
                         </select>
 
                         <p class="input_label">CPF:</p>
-                        <input type="text" id="cpf" class="cpf_input" required/>
+                        <input type="number" placeholder="12345678910" pattern="[0-9]{11} id="cpf" class="cpf_input"  required/>
+
+                        <p class="input_label">Matrícula:</p>
+                        <input type="number" placeholder="019283746592" pattern="[0-9]{10} id="matricula" class="cpf_input"  required/>
+                        
+                        <p class="input_label">Senha:</p>
+                        <input type="password" placeholder="" id="matricula" class="cpf_input"  required/>
+                        
+                        <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
+                            <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
+                            <input type="submit" value="Concluir" class="bt_concluir">
+                        </span>
 
                     </form>
 
-                    <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
-                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
-                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
-                    </span>
                 </div>
             </div>
 
-            <div id="remover_cliente" class="modal">
+            <div id="remover_operador" class="modal">
                 <div class="modal_conteudo">
-                    <h1>REMOVER OPERADOR</h1>
-                    <p>Em construção</p>
-                    <span class="modal_screen_options">
-                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
-                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
-                    </span>
+                    
+                    <h1 class="modal_header" align="center">REMOVER OPERADOR</h1>
+                    
+                    <form>
+
+                        <span class="fields_inline" style="margin-bottom: 4vh;">
+                        <div id="identificador">
+                        <p class="input_label" style="margin-top: 6vh;">Identificador:</p>
+                        <input type="search" id="nome" class="identificador_input" required/>
+                        <button id="search_bt"><img src="/.media/lupa.png" style="width: 1.5vw;"/></button>
+                        </div>
+
+                        <div id="id_type" style="margin-top: 7.8vh; margin-left: 2vw;">
+                            <input type="radio" name="id_option" value="matricula" checked>
+                            <label for="matricula" class="id_label">Matrícula</label><br/>
+                            <input type="radio" name="id_option" value="nome" >
+                            <label for="nome" class="id_label">Nome</label><br/>
+                            <input type="radio" name="id_option" value="cpf" >
+                            <label for="cpf" class="id_label">CPF</label>
+                        </div>
+                        </span>
+
+                        <div id="nome">
+                            <p class="input_label">Matrícula:</p>
+                            <div class="nome_exhibit" id="nome"></div>
+                        </div>
+
+                        <span class="fields_inline">
+                            <div id="birthdate">
+                                <p class="input_label">Data de Nascimento:</p>
+                                <div class="birthdate_exhibit" id="data_nascimento"></div>
+                            </div>
+
+                            <div id="genero" style="margin-left: 2vw;">
+                                <p class="input_label">Gênero:</p>
+                                <div class="gender_exhibit" id="genero"></div>
+                            </div>
+                        </span>
+
+                        <span class="fields_inline">
+                            <div id="cpf">
+                                <p class="input_label">CPF:</p>
+                                <div class="cpf_exhibit" id="cpf"></div>
+                            </div>
+
+                            <div id="matricula" style="margin-left: 2vw;">
+                                <p class="input_label">Matrícula:</p>
+                                <div class="matricula_exhibit" id="matricula"></div>
+                            </div>
+                        </span>
+                        
+                        <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
+                            <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
+                            <input type="submit" value="Concluir" class="bt_concluir">
+                        </span>
+                    <br/>
+                    <br/>
+                    <a href="" id="excluir_operador">Excluir este operador</a>
+
+                    </form>
+
                 </div>
             </div>
 
@@ -140,12 +201,70 @@
 
             <div id="cadastrar_cliente" class="modal">
                 <div class="modal_conteudo">
-                    <h1>CADASTRAR CLIENTE</h1>
-                    <p>Em construção</p>
-                    <span class="modal_screen_options">
-                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
-                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
-                    </span>
+                    
+                    <h1 class="modal_header" align="center">CADASTRAR CLIENTE</h1>
+                    
+                    <form>
+
+                        <span class="fields_inline">
+                        <div id="field_nome">
+                            <p class="input_label" style="margin-top: 10vh;">Nome:</p>
+                            <input type="text" id="nome" class="name_input" required/>
+                        </div>
+
+                        <div id="field_natureza" style="margin-left: 2vw;">
+                            <p class="input_label" id="natureza" style="margin-top: 10vh;">Natureza:</p>
+                            <select id="natureza" class="natureza_input" required>
+                                <option value="CPF/CNPJ" disabled selected>Selecione</option>
+                                <option value="CPF">Pessoa Física</option>
+                                <option value="CNPJ">Pessoa Jurídica</option>
+                            </select>
+                        </div>
+                        </span>
+
+                        <span class="fields_inline">
+                            <div id="field_cpf">
+                                <p class="input_label">CPF/CNPJ:</p>
+                                <input type="number" placeholder="12345678910" id="cpf" class="cpf_input"  required/>
+                            </div>
+
+                            <div id="field_data_nascimento" style="margin-left: 2vw;">
+                                <p class="input_label">Data de Nascimento:</p>
+                                <input type="date" id="data_nascimento" class="birthdate_input" required/>
+                            </div>
+                        </span>
+                        
+                        <span class="fields_inline">
+                            <div id="field_genero">
+                                <p class="input_label">Gênero:</p>
+                                <select id="genero" class="gender_input" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="I">Outros</option>
+                                </select>
+                            </div>
+                        
+
+                            <div id="field_phone" style="margin-left: 2vw;">
+                                <p class="input_label">Telefone:</p>
+                                <input type="text" placeholder="(21)91234-5678" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" id="matricula" class="phone_input"  required/>
+                            </div>
+                        </span>
+
+                        <div id="field_mail">
+                            <p class="input_label">E-mail:</p>
+                            <input type="mail" placeholder="fulano@mail.com" id="fulano" class="mail_input"  required/>
+                        </div>
+
+
+                        <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
+                            <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
+                            <input type="submit" value="Concluir" class="bt_concluir">
+                        </span>
+
+                    </form>
+
                 </div>
             </div>
 
