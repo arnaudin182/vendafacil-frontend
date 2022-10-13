@@ -1,215 +1,369 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-        <title>Admin - PDV VendaFácil</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="/.css/adminpage.css">
-        <link rel="icon" type="image/x-icon" href=".media/favicon.png">
-        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200&family=Reem+Kufi+Ink&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        
-        <div id="session_info" align="right">
-            <script type="text/javascript" src="/.js/current_time.js" ></script> <!--SCRIPT PARA RETORNAR A HORA EM TEMPO REAL-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Admin - PDV VendaFácil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="/.css/adminpage.css">
+    <link rel="icon" type="image/x-icon" href=".media/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200&family=Reem+Kufi+Ink&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="session_info" align="right">
+        <script type="text/javascript" src="/.js/current_time.js"></script>
+        <!--SCRIPT PARA RETORNAR A HORA EM TEMPO REAL-->
+    </div>
+
+    <a href="/login.html" align="right" style="font-family: Montserrat, sans-serif; font-size: 2vh;"
+        id="disconnect">Desconectar</a>
+
+    <div class="page_estructure">
+
+        <div id="logo">
+            <img src="/.media/logo.png" style="width: 20vw;">
         </div>
 
-        <a href="/login.html" align="right" style="font-family: Montserrat, sans-serif; font-size: 2vh;" id="disconnect">Desconectar</a>
-        
-        <div class="page_estructure">
+        <h1 id="page_caption">Painel de Administrador</h1>
 
-            <div id="logo">
-                <img src="/.media/logo.png" style="width: 20vw;">
-            </div>
+        <div id="modal_options">
+            <!--BOTÕES DE MODAIS-->
 
-            <h1 id="page_caption">Painel de Administrador</h1>
-
-            <div id="modal_options"> <!--BOTÕES DE MODAIS-->
-
-                <a href="#cadastrar_operador"><div class="modal_button" id="modal_cadastrar_operador"> <!--MODAL CADASTRAR OPERADOR-->
+            <a href="#cadastrar_operador">
+                <div class="modal_button" id="modal_cadastrar_operador">
+                    <!--MODAL CADASTRAR OPERADOR-->
                     <table>
                         <tr>
                             <td>
-                                <img src="/.media/cadastrar-operador.png" style="height: 11vh"/>
+                                <img src="/.media/cadastrar-operador.png" style="height: 11vh" />
                             </td>
                             <td>
-                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: 900;">CADASTRAR<br>OPERADOR</font>
+                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: 900;">
+                                    CADASTRAR<br>OPERADOR</font>
                             </td>
                         </tr>
                     </table>
-                </div></a>
-
-                <a href="#remover_operador"><div class="modal_button" id="modal_remover_operador"> <!--MODAL REMOVER OPERADOR-->
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="/.media/remover-operador.png" style="height: 11vh"/>
-                            </td>
-                            <td>
-                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: bolder;">REMOVER<br>OPERADOR</font>
-                            </td>
-                        </tr>
-                    </table>
-                </div></a>
-
-                <a href="#atualizar_estoque"><div class="modal_button" id="modal_atualizar_estoque"> <!--MODAL ATUALIZAR ESTOQUE-->
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="/.media/atualizar-estoque.png" style="height: 11vh"/>
-                            </td>
-                            <td>
-                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: bolder;">ATUALIZAR<br>ESTOQUE</font>
-                            </td>
-                        </tr>
-                    </table>
-                </div></a>
-
-                <a href="#cadastrar_cliente"><div class="modal_button" id="modal_cadastrar_cliente"> <!--MODAL CADASTRAR CLIENTE-->
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="/.media/cadastrar-cliente.png" style="height: 11vh"/>
-                            </td>
-                            <td>
-                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: bolder;">CADASTRAR<br>CLIENTE</font>
-                            </td>
-                        </tr>
-                    </table>
-                </div></a>
-
-
-            </div>
-
-            <div id="cadastrar_operador" class="modal">
-                <div class="modal_conteudo">
-
-                    <h1 class="modal_header" align="center">CADASTRAR OPERADOR</h1>
-                    
-                    <form>
-
-                        <p class="input_label">Nome:</p>
-                        <input type="text" id="nome" class="name_input" required/>
-
-                        <p class="input_label">Data de Nascimento:</p>
-                        <input type="date" id="data_nascimento" class="birthdate_input" required/>
-
-                        <p class="input_label">Gênero:</p>
-                        <select id="genero" class="gender_input" required>
-                            <option value="" disabled selected>Selecione</option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Feminino</option>
-                            <option value="I">Outros</option>
-                        </select>
-
-                        <p class="input_label">CPF:</p>
-                        <input type="number" placeholder="12345678910" pattern="[0-9]{11} id="cpf" class="cpf_input"  required/>
-
-                        <p class="input_label">Matrícula:</p>
-                        <input type="number" placeholder="019283746592" pattern="[0-9]{10} id="matricula" class="cpf_input"  required/>
-                        
-                        <p class="input_label">Senha:</p>
-                        <input type="password" placeholder="" id="matricula" class="cpf_input"  required/>
-                        
-                        <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
-                            <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
-                            <input type="submit" value="Concluir" class="bt_concluir">
-                        </span>
-
-                    </form>
-
                 </div>
+            </a>
+
+            <a href="#remover_operador">
+                <div class="modal_button" id="modal_remover_operador">
+                    <!--MODAL REMOVER OPERADOR-->
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/.media/remover-operador.png" style="height: 11vh" />
+                            </td>
+                            <td>
+                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: bolder;">
+                                    REMOVER<br>OPERADOR</font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </a>
+
+            <a href="#atualizar_estoque">
+                <div class="modal_button" id="modal_atualizar_estoque">
+                    <!--MODAL ATUALIZAR ESTOQUE-->
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/.media/atualizar-estoque.png" style="height: 11vh" />
+                            </td>
+                            <td>
+                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: bolder;">
+                                    ATUALIZAR<br>ESTOQUE</font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </a>
+
+            <a href="#cadastrar_cliente">
+                <div class="modal_button" id="modal_cadastrar_cliente">
+                    <!--MODAL CADASTRAR CLIENTE-->
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/.media/cadastrar-cliente.png" style="height: 11vh" />
+                            </td>
+                            <td>
+                                <font style="font-family: Montserrat,sans-serif; font-size:4vh; font-weight: bolder;">
+                                    CADASTRAR<br>CLIENTE</font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </a>
+
+
+        </div>
+
+        <div id="cadastrar_operador" class="modal">
+            <div class="modal_conteudo">
+
+                <h1 class="modal_header" align="center">CADASTRAR OPERADOR</h1>
+
+                <form>
+
+                    <p class="input_label">Nome:</p>
+                    <input type="text" id="nome" class="name_input" required />
+
+                    <p class="input_label">Data de Nascimento:</p>
+                    <input type="date" id="data_nascimento" class="birthdate_input" required />
+
+                    <p class="input_label">Gênero:</p>
+                    <select id="genero" class="gender_input" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="I">Outros</option>
+                    </select>
+
+                    <p class="input_label">CPF:</p>
+                    <input type="number" placeholder="12345678910" pattern="[0-9]{11} id=" cpf" class="cpf_input"
+                        required />
+
+                    <p class="input_label">Matrícula:</p>
+                    <input type="number" placeholder="019283746592" pattern="[0-9]{10} id=" matricula" class="cpf_input"
+                        required />
+
+                    <p class="input_label">Senha:</p>
+                    <input type="password" placeholder="" id="matricula" class="cpf_input" required />
+
+                    <span class="modal_screen_options">
+                        <!--BOTÕES CANCELAR/CONCLUIR-->
+                        <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
+                        <input type="submit" value="Concluir" class="bt_concluir">
+                    </span>
+
+
+                </form>
+
             </div>
+        </div>
 
-            <div id="remover_operador" class="modal">
-                <div class="modal_conteudo">
-                    
-                    <h1 class="modal_header" align="center">REMOVER OPERADOR</h1>
-                    
-                    <form>
+        <div id="remover_operador" class="modal">
+            <div class="modal_conteudo">
 
-                        <span class="fields_inline" style="margin-bottom: 4vh;">
+                <h1 class="modal_header" align="center">REMOVER OPERADOR</h1>
+
+                <form>
+
+                    <span class="fields_inline" style="margin-bottom: 4vh;">
                         <div id="identificador">
-                        <p class="input_label" style="margin-top: 6vh;">Identificador:</p>
-                        <input type="search" id="nome" class="identificador_input" required/>
-                        <button id="search_bt"><img src="/.media/lupa.png" style="width: 1.5vw;"/></button>
+                            <p class="input_label" style="margin-top: 6vh;">Identificador:</p>
+                            <input type="search" id="nome" class="identificador_input" required />
+                            <button id="search_bt"><img src="/.media/lupa.png" style="width: 1.5vw;" /></button>
                         </div>
 
                         <div id="id_type" style="margin-top: 7.8vh; margin-left: 2vw;">
                             <input type="radio" name="id_option" value="matricula" checked>
-                            <label for="matricula" class="id_label">Matrícula</label><br/>
-                            <input type="radio" name="id_option" value="nome" >
-                            <label for="nome" class="id_label">Nome</label><br/>
-                            <input type="radio" name="id_option" value="cpf" >
+                            <label for="matricula" class="id_label">Matrícula</label><br />
+                            <input type="radio" name="id_option" value="nome">
+                            <label for="nome" class="id_label">Nome</label><br />
+                            <input type="radio" name="id_option" value="cpf">
                             <label for="cpf" class="id_label">CPF</label>
                         </div>
-                        </span>
+                    </span>
 
-                        <div id="nome">
-                            <p class="input_label">Matrícula:</p>
-                            <div class="nome_exhibit" id="nome"></div>
+                    <div id="nome">
+                        <p class="input_label">Matrícula:</p>
+                        <div class="nome_exhibit" id="nome"></div>
+                    </div>
+
+                    <span class="fields_inline">
+                        <div id="birthdate">
+                            <p class="input_label">Data de Nascimento:</p>
+                            <div class="birthdate_exhibit" id="data_nascimento"></div>
                         </div>
 
-                        <span class="fields_inline">
-                            <div id="birthdate">
-                                <p class="input_label">Data de Nascimento:</p>
-                                <div class="birthdate_exhibit" id="data_nascimento"></div>
-                            </div>
+                        <div id="genero" style="margin-left: 2vw;">
+                            <p class="input_label">Gênero:</p>
+                            <div class="gender_exhibit" id="genero"></div>
+                        </div>
+                    </span>
 
-                            <div id="genero" style="margin-left: 2vw;">
-                                <p class="input_label">Gênero:</p>
-                                <div class="gender_exhibit" id="genero"></div>
-                            </div>
-                        </span>
+                    <span class="fields_inline">
+                        <div id="cpf">
+                            <p class="input_label">CPF:</p>
+                            <div class="cpf_exhibit" id="cpf"></div>
+                        </div>
 
-                        <span class="fields_inline">
-                            <div id="cpf">
-                                <p class="input_label">CPF:</p>
-                                <div class="cpf_exhibit" id="cpf"></div>
-                            </div>
+                        <div id="matricula" style="margin-left: 2vw;">
+                            <p class="input_label">Matrícula:</p>
+                            <div class="matricula_exhibit" id="matricula"></div>
+                        </div>
+                    </span>
 
-                            <div id="matricula" style="margin-left: 2vw;">
-                                <p class="input_label">Matrícula:</p>
-                                <div class="matricula_exhibit" id="matricula"></div>
-                            </div>
-                        </span>
-                        
-                        <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
-                            <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
-                            <input type="submit" value="Concluir" class="bt_concluir">
-                        </span>
-                    <br/>
-                    <br/>
+                    <span class="modal_screen_options">
+                        <!--BOTÕES CANCELAR/CONCLUIR-->
+                        <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
+                        <input type="submit" value="Concluir" class="bt_concluir">
+                    </span>
+                    <br />
+                    <br />
                     <a href="" id="excluir_operador">Excluir este operador</a>
 
-                    </form>
+                </form>
 
-                </div>
             </div>
+        </div>
 
-            <div id="atualizar_estoque" class="modal">
-                <div class="modal_conteudo">
-                    <h1>ATUALIZAR ESTOQUE</h1>
-                    <p>Em construção</p>
-                    <span class="modal_screen_options">
-                        <button class="bt_cancelar" onclick="location.href='#'">Cancelar</button>
-                        <button class="bt_concluir" onclick="location.href='#'">Concluir</button>
-                    </span>
-                </div>
-            </div>
+        <div id="atualizar_estoque" class="modal">
+            <div class="modal_conteudo">
 
-            <div id="cadastrar_cliente" class="modal">
-                <div class="modal_conteudo">
-                    
-                    <h1 class="modal_header" align="center">CADASTRAR CLIENTE</h1>
-                    
-                    <form>
+                <h1 class="modal_header" align="center">ATUALIZAR ESTOQUE</h1>
 
+                <form>
+
+                    <span class="fields_inline">
+                        <div id="field_codigobarra">
+                            <p class="input_label" style="margin-top: 5vh;">Código de Barras</p>
+                            <input type="number" id="codigobarra" class="codigo_barra" required />
+                            <span style="float: right;">
+                                <button id="seaarch_bt"><img src="/.media/lupa.png" style="width: 1.5vw"></button>
+                            </span>
+                        </div>
+
+                        <div id="field_descricao" style="margin-left: 1.5vw;">
+                            <p class="input_label" style="margin-top: 5vh;">Descrição </p>
+                            <input type="text" id="descricao" class="descricao_exhibit"/>
+                        </div>
                         <span class="fields_inline">
+                            <div id="field_unidade" style="margin-left: 1.5vw;">
+                                <p class="input_label" style="margin-top: 5vh;">Unidade</p>
+                                <select id="unidade" class="unidade_input">
+                                    <!--<option value="" disabled selected></option>-->
+                                    <option value="unidade" selected>UN</option>
+                                    <option value="kg">KG</option>
+                                    <option value="ml">ML</option>
+                                </select>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="fields_inline">
+                        <div id="field_quantidade">
+                            <p class="input_label">Quantidade</p>
+                            <input type="number" id="cpf" class="qtd_input"/>
+                        </div>
+
+                        <div id="field_preco" style="margin-left: 1.5vw;">
+                            <p class="input_label">Preço</p>
+                            <input type="number" id="data_preco" class="preco_input"/>
+
+                        </div>
+
+                        <div id="field_categoria" style="margin-left: 1.5vw;">
+                            <p class="input_label">Categoria</p>
+                            <select id="categoria" class="categoria_input">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="colocar aqui">teste1</option>
+                                <option value="colocar aqui">teste2</option>
+                                <option value="colocar aqui">teste3</option>
+                            </select>
+
+                        </div>
+
+                    </span>
+
+                    <span class="fields_inline">
+                        <div id="field_disponibilidade">
+                            <p class="input_label">Disponível?</p>
+                            <select id="disponibilidade" class="disponibilidade_input">
+                                <!--<option value="" disabled selected></option>-->
+                                <option value="sim" selected>SIM</option>
+                                <option value="não">NÃO</option>
+                            </select>
+                        </div>
+                    </span>
+
+                    <span style="display: flex;">
+                        <div class="cadastrar-produto_button" id="cadastrar_produto">
+                            <a href="">
+                                <table style="margin-top: 1vh;">
+                                    <tr>
+                                        <td>
+                                            <img src="/.media/adicionar-produto.png" style="height: 6.5vh" />
+                                        </td>
+                                        <td>
+                                            <font
+                                                style="font-family: Montserrat,sans-serif; font-size: 2vh; font-weight: 900;">
+                                                CADASTRAR<br>PRODUTO</font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a>
+
+                        </div>
+                        <div class="cadastrar-produto_button" id="editar_produto" style="margin-left: 2vh;">
+                            <a href="">
+                                <table style="margin-top: 1vh;">
+                                    <tr>
+                                        <td>
+                                            <img src="/.media/botao-editar.png" style="height: 6vh" />
+                                        </td>
+                                        <td>
+                                            <font
+                                                style="font-family: Montserrat,sans-serif; font-size: 2vh; font-weight: 900;">
+                                                EDITAR<br>PRODUTO</font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a>
+
+                        </div>
+
+                        <div class="cadastrar-produto_button" id="editar_produto" style="margin-left: 2vh;">
+                            <a href="">
+                                <table style="margin-top: 1vh;"
+                                    <tr>
+                                        <td>
+                                            <img src="/.media/excluir.png" style="height: 6vh" />
+                                        </td>
+                                        <td>
+                                            <font
+                                                style="font-family: Montserrat,sans-serif; font-size: 2vh; font-weight: 900;">
+                                                EXCLUIR<br>PRODUTO</font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a>
+
+                        </div>
+
+                    </span>
+                    <span class="modal_screen_options">
+                        <!--BOTÕES CANCELAR/CONCLUIR-->
+                        <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
+                        <input type="submit" value="Concluir" class="bt_concluir">
+
+                    </span>
+
+                    </span>
+            </div>
+            </span>
+
+            </form>
+        </div>
+
+
+        <div id="cadastrar_cliente" class="modal">
+            <div class="modal_conteudo">
+
+                <h1 class="modal_header" align="center">CADASTRAR CLIENTE</h1>
+
+                <form>
+
+                    <span class="fields_inline">
                         <div id="field_nome">
                             <p class="input_label" style="margin-top: 10vh;">Nome:</p>
-                            <input type="text" id="nome" class="name_input" required/>
+                            <input type="text" id="nome" class="name_input" required />
                         </div>
 
                         <div id="field_natureza" style="margin-left: 2vw;">
@@ -220,56 +374,60 @@
                                 <option value="CNPJ">Pessoa Jurídica</option>
                             </select>
                         </div>
-                        </span>
+                    </span>
 
-                        <span class="fields_inline">
-                            <div id="field_cpf">
-                                <p class="input_label">CPF/CNPJ:</p>
-                                <input type="number" placeholder="12345678910" id="cpf" class="cpf_input"  required/>
-                            </div>
+                    <span class="fields_inline">
+                        <div id="field_cpf">
+                            <p class="input_label">CPF/CNPJ:</p>
+                            <input type="number" placeholder="12345678910" id="cpf" class="cpf_input" required />
+                        </div>
 
-                            <div id="field_data_nascimento" style="margin-left: 2vw;">
-                                <p class="input_label">Data de Nascimento:</p>
-                                <input type="date" id="data_nascimento" class="birthdate_input" required/>
-                            </div>
-                        </span>
-                        
-                        <span class="fields_inline">
-                            <div id="field_genero">
-                                <p class="input_label">Gênero:</p>
-                                <select id="genero" class="gender_input" required>
-                                    <option value="" disabled selected>Selecione</option>
-                                    <option value="M">Masculino</option>
-                                    <option value="F">Feminino</option>
-                                    <option value="I">Outros</option>
-                                </select>
-                            </div>
-                        
+                        <div id="field_data_nascimento" style="margin-left: 2vw;">
+                            <p class="input_label">Data de Nascimento:</p>
+                            <input type="date" id="data_nascimento" class="birthdate_input" required />
+                        </div>
+                    </span>
 
-                            <div id="field_phone" style="margin-left: 2vw;">
-                                <p class="input_label">Telefone:</p>
-                                <input type="text" placeholder="(21)91234-5678" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" id="matricula" class="phone_input"  required/>
-                            </div>
-                        </span>
-
-                        <div id="field_mail">
-                            <p class="input_label">E-mail:</p>
-                            <input type="mail" placeholder="fulano@mail.com" id="fulano" class="mail_input"  required/>
+                    <span class="fields_inline">
+                        <div id="field_genero">
+                            <p class="input_label">Gênero:</p>
+                            <select id="genero" class="gender_input" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                                <option value="I">Outros</option>
+                            </select>
                         </div>
 
 
-                        <span class="modal_screen_options"> <!--BOTÕES CANCELAR/CONCLUIR-->
-                            <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
-                            <input type="submit" value="Concluir" class="bt_concluir">
-                        </span>
+                        <div id="field_phone" style="margin-left: 2vw;">
+                            <p class="input_label">Telefone:</p>
+                            <input type="text" placeholder="(21)91234-5678" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}"
+                                id="matricula" class="phone_input" required />
+                        </div>
+                    </span>
 
-                    </form>
+                    <div id="field_mail">
+                        <p class="input_label">E-mail:</p>
+                        <input type="mail" placeholder="fulano@mail.com" id="fulano" class="mail_input" required />
+                    </div>
 
-                </div>
+
+                    <span class="modal_screen_options">
+                        <!--BOTÕES CANCELAR/CONCLUIR-->
+                        <input type="reset" value="Cancelar" class="bt_cancelar" onclick="location.href='#'">
+                        <input type="submit" value="Concluir" class="bt_concluir">
+                    </span>
+
+                </form>
+
             </div>
-
         </div>
-        
-    </body>
-    <footer style="font-family: Montserrat, sans-serif; font-size: 1vw; font-weight: bold;">Todos os direitos registrados - VendaFácil © 2022</footer>
+
+    </div>
+
+</body>
+<footer style="font-family: Montserrat, sans-serif; font-size: 1vw; font-weight: bold;">Todos os direitos registrados -
+    VendaFácil © 2022</footer>
+
 </html>
