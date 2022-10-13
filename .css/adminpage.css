@@ -1,4 +1,4 @@
-body{
+body {
     min-height: 100vh;
     margin: auto;
     display: flex;
@@ -6,33 +6,40 @@ body{
     background-image: url("/.media/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    <!--align-items: center;-->
- }
- footer{
+    < !--align-items: center;
+    -->
+}
+
+footer {
     margin-top: auto;
     align-self: center;
- }
- #logo{
+}
+
+#logo {
     margin-top: 0;
     margin-bottom: -5vh;
- }
- #session_info{
+}
+
+#session_info {
     font-family: montserrat, sans-serif;
     font-size: 1.7vh;
-    font-weight:900;
+    font-weight: 900;
 }
-.page_estructure{
+
+.page_estructure {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#page_caption{
+
+#page_caption {
     color: rgb(39, 39, 39);
     font-family: Reem Kufi Ink;
     font-size: 8vh;
     margin-bottom: -0.5vh;
 }
-.modal_button{
+
+.modal_button {
     border-color: #000000;
     box-shadow: 2px 2px 10px #000000;
     border-radius: 10px;
@@ -44,21 +51,24 @@ body{
     text-align: center;
 }
 
-.modal_button:hover{
+.modal_button:hover {
     -webkit-filter: brightness(80%);
-    
+
 }
-table{
+
+table {
     margin: 0 auto
 }
-a:visited{
+
+a:visited {
     color: #000000;
 }
-a:not(#disconnect,#excluir_operador){
+
+a:not(#disconnect, #excluir_operador) {
     text-decoration: none;
 }
 
-.modal{
+.modal {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -73,7 +83,7 @@ a:not(#disconnect,#excluir_operador){
     transition: all .4s;
 }
 
-.modal_conteudo{
+.modal_conteudo {
     border-radius: 20px;
     position: relative;
     width: 55vw;
@@ -83,12 +93,12 @@ a:not(#disconnect,#excluir_operador){
     box-shadow: 2px 2px 20px #000000;
 }
 
-.modal:target{
+.modal:target {
     visibility: visible;
     opacity: 1;
 }
 
-.bt_cancelar{
+.bt_cancelar {
     background-color: #a40c0c;
     width: 9vw;
     height: 6vh;
@@ -103,13 +113,14 @@ a:not(#disconnect,#excluir_operador){
     margin-top: auto;
     cursor: pointer;
     onclick=""
-    
+
 }
-.bt_cancelar:hover{
+
+.bt_cancelar:hover {
     -webkit-filter: brightness(70%);
 }
 
-.bt_concluir{
+.bt_concluir {
     background-color: #059d3a;
     width: 9vw;
     height: 6vh;
@@ -123,52 +134,58 @@ a:not(#disconnect,#excluir_operador){
     vertical-align: middle;
     margin-top: auto;
     cursor: pointer;
-    
+
 }
-.bt_concluir:hover{
+
+.bt_concluir:hover {
     -webkit-filter: brightness(70%);
 }
 
-.modal_screen_options{
+.modal_screen_options {
     position: absolute;
     right: 4vh;
-    bottom:   3vh;
+    bottom: 3vh;
 }
 
-.modal_header{
+.modal_header {
     font-family: Montserrat;
     font-size: 4vh;
     font-weight: bolder;
     margin-top: -0.5vh;
 }
-#disconnect{
+
+#disconnect {
     position: absolute;
     right: 0vh;
     top: 2vh;
 }
-.name_input{
+
+.name_input {
     width: 29vw;
     height: 3vh;
     font-family: Montserrat, sans-serif;
     font-size: 2.5vh;
 }
-.identificador_input{
+
+.identificador_input {
     float: left;
     width: 29vw;
     height: 4vh;
     font-family: Montserrat, sans-serif;
     font-size: 2.5vh;
 }
-#search_bt{
+
+#search_bt {
     cursor: pointer;
     width: 2.3vw;
     height: 4vh;
     justify-content: center;
     display: flex;
 }
-.natureza_input{
+
+.natureza_input {
     border-radius: 2px;
-    border-style: solid ;
+    border-style: solid;
     border-color: #6d6d6d;
     text-align: center;
     width: 15vw;
@@ -177,16 +194,18 @@ a:not(#disconnect,#excluir_operador){
     font-size: 2.5vh;
     background-color: #fff;
 }
-.birthdate_input{
+
+.birthdate_input {
     text-align: center;
     width: 13vw;
     height: 3.23vh;
     font-family: Montserrat, sans-serif;
     font-size: 2.5vh;
 }
-.gender_input{
+
+.gender_input {
     border-radius: 2px;
-    border-style: solid ;
+    border-style: solid;
     border-color: #6d6d6d;
     text-align: center;
     width: 15vw;
@@ -195,47 +214,55 @@ a:not(#disconnect,#excluir_operador){
     font-size: 2.5vh;
     background-color: #fff;
 }
-.cpf_input{
+
+.cpf_input {
     text-align: left;
     width: 13vw;
     height: 3vh;
     font-family: Montserrat, sans-serif;
     font-size: 2.5vh;
 }
-.phone_input{
+
+.phone_input {
     text-align: left;
     width: 13vw;
     height: 3vh;
     font-family: Montserrat, sans-serif;
     font-size: 2.5vh;
 }
-.mail_input{
+
+.mail_input {
     text-align: left;
     width: 20vw;
     height: 3vh;
     font-family: Montserrat, sans-serif;
     font-size: 2.5vh;
 }
-.input_label{
+
+.input_label {
     font-size: 2.5vh;
     font-weight: bolder;
     font-family: Roboto;
     margin-bottom: -0.05vh;
     margin-left: 0.5vh;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-.required{
+
+.required {
     color: red;
     font-weight: bolder;
 }
-.fields_inline{
-    position: relative;
+
+.fields_inline {
+    position:relative;
     display: flex;
 }
-.birthdate_exhibit{
+
+.birthdate_exhibit {
     text-align: center;
     width: 13vw;
     height: 3.23vh;
@@ -243,7 +270,8 @@ input::-webkit-inner-spin-button {
     font-size: 2.5vh;
     border: 1px solid rgb(0, 0, 0);
 }
-.gender_exhibit{
+
+.gender_exhibit {
     text-align: center;
     width: 13vw;
     height: 3.23vh;
@@ -251,7 +279,8 @@ input::-webkit-inner-spin-button {
     font-size: 2.5vh;
     border: 1px solid rgb(0, 0, 0);
 }
-.cpf_exhibit{
+
+.cpf_exhibit {
     text-align: center;
     width: 13vw;
     height: 3.23vh;
@@ -259,7 +288,8 @@ input::-webkit-inner-spin-button {
     font-size: 2.5vh;
     border: 1px solid rgb(0, 0, 0);
 }
-.matricula_exhibit{
+
+.matricula_exhibit {
     text-align: center;
     width: 13vw;
     height: 3.23vh;
@@ -267,7 +297,8 @@ input::-webkit-inner-spin-button {
     font-size: 2.5vh;
     border: 1px solid rgb(0, 0, 0);
 }
-.nome_exhibit{
+
+.nome_exhibit {
     text-align: center;
     width: 28vw;
     height: 3.23vh;
@@ -275,14 +306,103 @@ input::-webkit-inner-spin-button {
     font-size: 2.5vh;
     border: 1px solid rgb(0, 0, 0);
 }
-.id_label{
+
+.id_label {
     font-size: 1.5vh;
     font-weight: bolder;
     font-family: Roboto;
 }
-#excluir_operador{
+
+#excluir_operador {
     color: red;
     font-family: Roboto, sans-serif;
     font-size: 1.5vh;
     font-weight: bold;
+}
+.codigo_barra {
+    text-align: left;
+    width: 13vw;
+    height: 3vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+}
+
+.descricao_exhibit {
+    text-align: left;
+    width: 28vw;
+    height: 3vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+}
+
+#seaarch_bt {
+    cursor: pointer;
+    width: 2.3vw;
+    height: 3.8vh;
+    justify-content: center;
+    display: flex;
+}
+
+.unidade_input {
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #6d6d6d;
+    text-align: center;
+    width: 5vw;
+    height: 3.9vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+    background-color: #fff;
+}
+
+.qtd_input {
+    position:relative;
+    width: 16vw;
+    height: 3vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+}
+
+.preco_input {
+    position:relative;
+    width: 16vw;
+    height: 3vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+}
+
+.categoria_input {
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #6d6d6d;
+    text-align: center;
+    width: 14vw;
+    height: 3.9vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+    background-color: #fff;
+}
+
+.disponibilidade_input {
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #6d6d6d;
+    text-align: center;
+    width: 7vw;
+    height: 3.9vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5vh;
+    background-color: #fff;
+}
+
+.cadastrar-produto_button {
+    border-color: #000000;
+    box-shadow: 1px 1px 2px #000000;
+    border-radius: 10px;
+    margin-top: 5vh;
+    margin-bottom: 3.5vh;
+    background-color: rgb(197, 197, 197);
+    width: 10vw;
+    height: 9vh;
+    text-align: center;
 }
