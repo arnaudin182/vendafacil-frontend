@@ -406,3 +406,17 @@ input::-webkit-inner-spin-button {
     height: 9vh;
     text-align: center;
 }
+
+#user_list{
+    border-radius: 5px;
+    margin-top: 1vh;
+    border: 1px solid black;
+    height: 40vh;
+}
+#user_table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+}
